@@ -9,6 +9,11 @@ app_color = "grey"
 app_email = "asignments.sudha@gmail.com"
 app_license = "MIT"
 
+# fixtures = [
+#     "User", "Custom Field", "Workflow", "Workflow State", "Workflow Action Master"
+#     "Workflow Transition", "Website Settings",
+#     {"dt": "Role", "or_filters": [["name", "=", "Timesheet Manager"],["name", "=", "Timesheet User"]]},
+# ]
 # Includes in <head>
 # ------------------
 
