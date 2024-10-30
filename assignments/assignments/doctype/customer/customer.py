@@ -1,6 +1,23 @@
 # Copyright (c) 2024, Saisudha and contributors
 # For license information, please see license.txt
 
+"""
+There are two ways of writing apis
+1. Resource apis which are profided by frappe can be handled through hooks
+    a. eg: manage_customer: http://site_name/api/resource/Customer
+        Post request creates a new customer
+        Put request updates an existing customer
+    b. this requires authentication by creating a token and passing it in the header
+    c. tokens can be created for a user
+
+2. Custom apis which are written in python a method can become an api by adding a decorator @frappe.whitelist(allow_guest=True)
+    a. eg: manage_customer: http://site_name/api/method/assignments.assignments.doctype.customer.customer.manage_customer
+    b. this does not require authentication as we are allowing guest to access the api
+    c. this can be used for public apis
+    d. We can also add authentication by checking the token in the header by making allow_guest=False in the decorator
+
+Note: We can solve the given problem by both the ways for now I am choosing custom api
+"""
 import frappe
 from frappe.model.document import Document
 from frappe.utils import cint, validate_email_address, validate_phone_number
