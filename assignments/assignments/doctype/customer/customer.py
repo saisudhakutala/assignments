@@ -127,7 +127,6 @@ def update_customer(payload):
             if email_address in existing_emails:
                 existing_email = existing_emails[email_address]
                 existing_email.is_primary = cint(email_data.get("is_primary", 0))
-                print("Existing Email:", existing_email)
             else:
                 customer_doc.append("email", {
                     "doctype": "Customer Email",
