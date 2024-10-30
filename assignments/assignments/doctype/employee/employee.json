@@ -8,8 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "employee_name",
-  "employee_type",
-  "data_3"
+  "employee_type"
  ],
  "fields": [
   {
@@ -26,15 +25,11 @@
    "label": "Employee Type",
    "options": "Full Time\nContract Base",
    "reqd": 1
-  },
-  {
-   "fieldname": "data_3",
-   "fieldtype": "Data"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-10-29 19:21:50.369103",
+ "modified": "2024-10-30 13:46:15.561420",
  "modified_by": "Administrator",
  "module": "Assignments",
  "name": "Employee",
