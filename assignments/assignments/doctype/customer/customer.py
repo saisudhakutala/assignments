@@ -2,7 +2,7 @@
 # For license information, please see license.txt
 
 """
-There are two ways of writing apis
+There are two ways of writing rest apis in frappe
 1. Resource apis which are profided by frappe can be handled through hooks
     a. eg: manage_customer: http://site_name/api/resource/Customer
         Post request creates a new customer
