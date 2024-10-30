@@ -10,7 +10,7 @@ class Customer(Document):
     def validate(self):
         # Check if the email address is valid
         for email in self.email:
-            if not validate_email_address(email.email_address):
+            if not validate_email_address(email.email):
                 frappe.throw("Invalid email address: {}".format(email.email_address))
 
         # Check if the phone number is valid
