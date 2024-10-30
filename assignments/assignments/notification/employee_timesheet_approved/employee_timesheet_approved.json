@@ -1,0 +1,32 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.status==\"Approved\"",
+ "creation": "2024-10-29 19:35:24.753938",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Employee Timesheet",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "modified": "2024-10-29 19:40:43.890905",
+ "modified_by": "Administrator",
+ "module": "Assignments",
+ "name": "Employee Timesheet Approved",
+ "owner": "Administrator",
+ "print_format": "",
+ "recipients": [
+  {
+   "condition": "\"status=='Approved'\"",
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Timesheet User"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Timesheet {{doc.name}} Approved",
+ "value_changed": "status"
+}
