@@ -233,24 +233,24 @@ def manage_customer(data=None):
     elif frappe.request.method == "PUT":
         result = update_customer(payload)
     else:
-        frappe.throw("Invalid method", frappe.ValidationError)
+        frappe.throw("Invalid http method, only allowed Post and Put", frappe.ValidationError)
     return result
 
 # sample payload for create_customer
-data = {
-    "customer_name": "John Doe",
-    "salutation": "Mr",
-    "sales_person": "Jane Doe",
-    "emails": [
-        {"email_address": "john@gmail.com", "is_primary": 1},
-        {"email_address": "jane@gmail.com", "is_primary": 0}
-    ],
-    "phone_numbers": [
-        {"phone_number": "123456789", "is_primary": 1},
-        {"phone_number": "987654321", "is_primary": 0}
-    ],
-    "addresses": [
-        {"address_line": "123, Main Street", "city": "New York", "state": "New York", "country": "USA", "pincode": "10001"},
-        {"address_line": "456, Main Street", "city": "Los Angeles", "state": "California", "country": "USA", "pincode": "90001"}
-    ]
-}
+# data = {
+#     "customer_name": "John Doe",
+#     "salutation": "Mr",
+#     "sales_person": "Jane Doe",
+#     "emails": [
+#         {"email_address": "john@gmail.com", "is_primary": 1},
+#         {"email_address": "jane@gmail.com", "is_primary": 0}
+#     ],
+#     "phone_numbers": [
+#         {"phone_number": "123456789", "is_primary": 1},
+#         {"phone_number": "987654321", "is_primary": 0}
+#     ],
+#     "addresses": [
+#         {"address_line": "123, Main Street", "city": "New York", "state": "New York", "country": "USA", "pincode": "10001"},
+#         {"address_line": "456, Main Street", "city": "Los Angeles", "state": "California", "country": "USA", "pincode": "90001"}
+#     ]
+# }
